@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Page</title>
+</head>
+<body style="text-align:center; font-family:Arial;">
+    <h2>Enter Meal Details</h2>
+    <form action="/result" method="post">
+
+        <!-- Categorical Features -->
+        <label>Cuisine:</label>
+        <select name="cuisine" required>
+            <option value="Indian">Indian</option>
+            <option value="Italian">Italian</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Mexican">Mexican</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <label>Meal Type:</label>
+        <select name="meal_type" required>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Snack">Snack</option>
+        </select><br><br>
+
+        <label>Diet Type:</label>
+        <select name="diet_type" required>
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="Vegan">Vegan</option>
+            <option value="Non-Vegetarian">Non-Vegetarian</option>
+        </select><br><br>
+
+        <label>Cooking Method:</label>
+        <select name="cooking_method" required>
+            <option value="Boiled">Boiled</option>
+            <option value="Fried">Fried</option>
+            <option value="Grilled">Grilled</option>
+            <option value="Baked">Baked</option>
+            <option value="Steamed">Steamed</option>
+        </select><br><br>
+
+        <!-- Numerical Features -->
+        <label>Calories:</label>
+        <input type="number" step="any" name="calories" required><br><br>
+
+        <label>Protein (g):</label>
+        <input type="number" step="any" name="protein_g" required><br><br>
+
+        <label>Carbs (g):</label>
+        <input type="number" step="any" name="carbs_g" required><br><br>
+
+        <label>Fat (g):</label>
+        <input type="number" step="any" name="fat_g" required><br><br>
+
+        <label>Fiber (g):</label>
+        <input type="number" step="any" name="fiber_g" required><br><br>
+
+        <label>Sugar (g):</label>
+        <input type="number" step="any" name="sugar_g" required><br><br>
+
+        <label>Sodium (mg):</label>
+        <input type="number" step="any" name="sodium_mg" required><br><br>
+
+        <label>Cholesterol (mg):</label>
+        <input type="number" step="any" name="cholesterol_mg" required><br><br>
+
+        <label>Serving Size (g):</label>
+        <input type="number" step="any" name="serving_size_g" required><br><br>
+
+        <label>Prep Time (min):</label>
+        <input type="number" step="any" name="prep_time_min" required><br><br>
+
+        <label>Cook Time (min):</label>
+        <input type="number" step="any" name="cook_time_min" required><br><br>
+
+        <label>Rating:</label>
+        <input type="number" step="any" min="1" max="5" name="rating" required><br><br>
+
+        <input type="submit" value="Predict Healthiness">
+    </form>
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>
