@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Flower Prediction</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body style="font-family: Arial; text-align: center; margin-top: 50px;">
+    <h1>Iris Flower Prediction (Decision Tree)</h1>
+    <form action="/predict" method="post">
+        <label>Sepal Length:</label>
+        <input type="text" name="sepal_length" required /><br/><br/>
+        
+        <label>Sepal Width:</label>
+        <input type="text" name="sepal_width" required/><br/><br/>
+        
+        <label>Petal Length:</label>
+        <input type="text" name="petal_length" required /><br/><br/>
+
+        <label>Petal Width:</label>
+        <input type="text" name="petal_width" required /><br/><br/>
+
+        <button type="submit">Predict Species</button>
+    </form>
+    <h3 style="color: green; margin-top: 20px;">{{ prediction_text }}</h3>
+</body>
+</html>
+    
