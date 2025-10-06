@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+</head>
+<body style="background-color: #f0f8ff; font-family: Arial, sans-serif; margin: 20px; text-align: center;">
+    <h1>Welcome to the Diabetes Prediction App</h1>
+    <p>Use this app to predict diabetes risk based on patient data.</p>
+    
+    <form action="/predict" method="post">
+        <label>Age:</label>
+        <input type="text" name="age" required><br><br>
+        
+        <label>BMI:</label>
+        <input type="text" name="bmi" required><br><br>
+        
+        <label>Blood Pressure:</label>
+        <input type="text" name="blood_pressure" required><br><br>
+        <label>Physical Activity Level (1-10):</label>
+        <input type="text" name="physical_activity" required><br><br>
+
+        <label>Glucose Level:</label>
+        <input type="text" name="glucose_level" required><br><br>
+        <label>Insulin Level:</label>
+        <input type="text" name="insulin_level" required><br><br>
+        <label>Family History (1 for Yes, 0 for No):</label>
+        <input type="text" name="family_history" required><br><br>
+        
+
+        <input type="submit" value="Predict" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">
+    </form>
+
+    <h3 style="color: green;">{{ prediction_text }}</h3>
+
+    <footer>
+        <p>&copy; 2024 Diabetes Prediction App</p>
+    </footer>
+</body>
+</html>
